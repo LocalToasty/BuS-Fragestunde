@@ -1,0 +1,19 @@
+\section{Banker-Algorithmus}
+
+Zugeh"orige Folien: VI-119--122 \\
+
+Es existieren drei Prozesse $P_1, P_2, P_3$, welche die Betriebsmittel
+$BM_1, BM_2, BM_3$ benutzen wollen.  Zu Anfang seinen $V(0) = (V_1(0),
+V_2(0), V_3(0)) = (2, 5, 8)$ der jeweiligen Betriebsmittel frei
+verf"ugbar.  Die Prozesse stellen nun folgende Anfragen an das
+Betriebssystem, w"ahrend sie gleichzeitig die gegebene Anzahl an
+Betriebsmitteln halten:
+
+\begin{enumerate}
+\item $Q_1^\text{max}(0) = (3, 3, 4), H_1(0) = (10, 0, 3)$
+\item $Q_2^\text{max}(0) = (1, 2, 6), H_2(0) = (4, 3, 0)$
+\item $Q_3^\text{max}(0) = (7, 1, 1), H_3(0) = (1, 4, 2)$
+\end{enumerate}
+
+Ermitteln Sie mit Hilfe des Banker-Algorithmus, ob diese Anfragen
+sicher gew"ahrt werden k"onnen.
