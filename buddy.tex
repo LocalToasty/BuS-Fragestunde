@@ -1,16 +1,11 @@
-\section{Speicherverwaltung mit gewichteten Buddy-Systemen}
+\section{Speicherverwaltung mit Buddy-Systemen}
 
 Zugeh"orige Folien:  VII-22--27 \\
 
 Gegeben sei ein Rechner mit 32 MByte Hauptspeicher.  Die
-Speicherbelegung soll mittels eines gewichteten Buddy-Systems
-erfolgen.  Dabei soll ein Knoten, falls seine Gr"o"se ohne Rest durch
-3 teilbar ist, im Verh"altnis 1:2 aufgeteilt werden.  Ist seine
-Gr"o"se restlos durch 4, aber nicht durch drei teilbar, so wird kann
-er in zwei Speicherbereiche mit dem Verh"altnis 1:3 aufgeteilt werden.
-
-Es sollen nun nacheinander Speicherbereiche mit den folgenden
-Eigenschaften angefordert / freigegeben werden:
+Speicherverwaltung soll mittels eines gewichteten Buddy-Systems
+erfolgen.  Es sollen nun nacheinander Speicherbereiche mit den
+folgenden Eigenschaften angefordert / freigegeben werden:
 
 \begin{center}
   \begin{tabular}{|c|l|c|c|}
@@ -30,4 +25,14 @@ Stellen Sie die Speicherbelegung nach jeder Anforderung als Bin"arbaum
 dar.  Geben Sie weiterhin an, was die gr"o"stm"ogliche
 Speicheranforderung ist, welche nach Ausf"uhrung der Anfragen noch
 erfolgreich ausgef"uhrt werden kann, und viel Speicher durch interne
-Fragmentierung bedingt nicht mehr nutzbar ist.
+Fragmentierung bedingt nicht mehr nutzbar ist.  Tun Sie dies f"ur
+
+\begin{enumerate}
+\item[(a)] ein ungewichtetes Buddy-System.
+  
+\item[(b)] ein gewichtetes Buddy-System.  Dabei soll ein Knoten, falls
+  seine Gr"o"se ohne Rest durch 3 teilbar ist, im Verh"altnis 1:2
+  aufgeteilt werden.  Ist seine Gr"o"se restlos durch 4, aber nicht
+  durch drei teilbar, so wird kann er in zwei Speicherbereiche mit dem
+  Verh"altnis 1:3 aufgeteilt werden.
+\end{enumerate}
