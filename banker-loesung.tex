@@ -1,0 +1,34 @@
+\paragraph{L"osung}
+
+\begin{itemize}
+\item $k = 0:$
+  \begin{itemize}
+  \item $P_1$ ist unmarkiert,
+    $Q_1^\text{max} = (3, 3, 4) \not \le V(0) = (2, 5, 8)$
+  \item $P_2$ ist unmarkiert,
+    $Q_2^\text{max} = (1, 2, 6) \le V(0) = (2, 5, 8)$: \\
+    Markiere $P_2$.
+    Setze $V(1) := V(0) + H_2 = (2, 5, 8) + (4, 3, 0) = (6, 8, 8)$.
+  \end{itemize}
+
+\item $k = 1:$
+  \begin{itemize}
+  \item $P_1$ ist unmarkiert,
+    $Q_1^\text{max} = (3, 3, 4) \le V(1) = (6, 8, 8)$: \\
+    Markiere $P_1$.
+    Setze $V(2) := V(1) + H_1 = (6, 8, 8) + (10, 0, 3) = (16, 8, 11)$.
+  \end{itemize}
+
+\item $k = 2:$
+  \begin{itemize}
+  \item $P_1$ ist markiert
+  \item $P_2$ ist markiert
+  \item $P_3$ ist unmarkiert,
+    $Q_3^\text{max} = (7, 1, 1) \le V(2) = (16, 8, 11)$: \\
+    Markiere $P_3$.
+    Setze $V(3) := V(2) + H_3 = (16, 8, 11) + (1, 4, 2) = (17, 12, 13)$.
+  \end{itemize}
+\end{itemize}
+
+Alle $P_i, i \in \{1, 2, 3\}$ sind markiert.  Demnach ist der Zustand
+sicher.
