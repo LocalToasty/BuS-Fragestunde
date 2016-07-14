@@ -1,0 +1,66 @@
+% This work is licensed under a Creative Commons CC BY-SA 4.0 License.
+\section{Multilevel Feedback Queueing}
+
+Zugeh"orige Folien:  V-31--33 \\
+
+Gegeben sei ein Multilevel Feedback Queueing mit vier
+Priorit"atsklassen, wobei jede Klasse eine eigene Warteschlange,
+Bedienstrategie sowie ein eigenes Quantum hat, wobei Klasse 1 diejenige
+mit der h"ochsten Priorit"at ist:
+
+\begin{center}
+  \begin{tabular}{ccc}
+    \toprule
+    Klasse & Quantum  & Bedienstrategie \\
+    \midrule
+    1      & 2        & SRPT \\
+    2      & 4        & LIFO \\
+    3      & 8        & RR${}_2$ \\
+    4      & $\infty$ & FIFO \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+Ein eingehender Prozess wird in der Zeiteinheit nach seinem eintreffen
+in seine Zugeh"orige Warteschlange eingereiht.  Wann immer ein Prozess
+sein Quantum aufgebraucht hat, wird er an das Ende der Warteschlange mit
+n"achstniedrigerer Priorit"at angeh"angt.  Wird ein Prozess
+unterbrochen, bevor er sein Zeitquantum aufgebraucht hat (weil zum
+Beispiel ein neuer Prozess mit h"oherer Priorit"at eintrifft), so wird
+er an den Anfang seiner gegenw"artigen Warteschlange gestellt, darf
+aber, wenn er das n"achste mal aufgerufen wird, nur sein Restquantum
+aufbrauchen.
+
+Nacheinander kommen verschiedene Prozesse mit folgenden Priorit"aten und
+Bedienzeiten an:
+
+\begin{center}
+  \begin{tabular}{cccc}
+    \toprule
+    Prozess & Ankunftszeit & Bedienzeit & Priorit"at \\
+    \midrule
+    A       & 0            & 3          & 3 \\
+    B       & 0            & 6          & 1 \\
+    C       & 2            & 3          & 1 \\
+    D       & 5            & 9          & 4 \\
+    E       & 7            & 2          & 2 \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+Ermitteln Sie f"ur jeden Zeitschritt $t \in \{1, \dots, 20\}$ welcher
+Prozess gerade l"auft, und welche Prozesse sich in welcher
+Priorit"atsklasse befinden.  Stellen Sie die Ergebnisse tabellarisch in
+folgender Form dar:
+
+\begin{center}
+  \begin{tabular}{rlllllc}
+    \toprule
+    t  & 1. SRPT (2) & 2. FILO (4)      & 3. RR${}_2$ (8)    & 4. FIFO ($\infty$) & Incoming     & Running \\
+    \midrule
+    1  &             &                  &                    &                    & $A(3), B(7)$ & \\
+    2  & $B_2(7)$    &                  & $A_8^2(3)$         &                    &              & $B(7)$ \\
+    $\vdots$ & \multicolumn{5}{c}{$\vdots$} & $\vdots$ \\
+    \bottomrule
+  \end{tabular}
+\end{center}
