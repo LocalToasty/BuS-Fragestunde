@@ -1,0 +1,36 @@
+% This work is licensed under a Creative Commons CC BY 4.0 License.
+\section{Deadlocks}
+
+Zugeh"orige Folien: VI-106--109 \\
+
+Auf einem System laufen drei Prozesse $P_1,P_2,P_3$, welche auf die vier
+Betriebsmittel $A,B,C,D$ zugreifen.  Die Prozesse werden simultan
+ausgef"uhrt.  Die Anforderungsmuster sehen dabei wie folgt aus:
+
+\begin{center}
+  \begin{tabular}{cccc}
+    \toprule
+    $t$ & $P_1$ & $P_2$ & $P_3$ \\
+    \midrule
+    1   & $C,4$ &       &       \\
+    2   &       & $D,5$ & $B,3$ \\
+    3   &       & $A,3$ &       \\
+    4   &       &       & $C,4$ \\
+    5   & $A,2$ & $B,1$ &       \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+Dabei bedeutet ein Eintrag $B,n$, dass der Prozess zu der gegebenen
+Zeiteinheit das Betriebsmittel $B$ f"ur $n$ Zeiteinheiten anfragt.
+
+Von jedem Betriebsmittel steht genau ein Exemplar zur Verf"ugung.  Wenn
+ein Prozess zum Zeitpunkt $t$ ein freies Betriebsmittel anfordert, so
+wird dieses dem Prozess zum Zeitpunkt $t$ zugeteilt, kann im Zeitraum $t
++ 1$ bis $t + a$ verwendet werden und kann zum Zeitpunkt $t + a + 1$
+wieder einem anderen Prozess zugeteilt werden. Ist das Betriebsmittel
+dagegen schon in Benutzung, wird der Prozess so lange suspendiert, bis
+es wieder freigegeben wird.
+
+Konstruieren Sie den Resource-Allocation-Graph zum Zeitpunkt $t=5$ und
+entscheiden Sie begr"undet, ob ein Deadlock vorliegt.
