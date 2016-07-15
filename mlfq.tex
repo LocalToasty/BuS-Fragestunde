@@ -5,8 +5,8 @@ Zugeh"orige Folien:  V-31--33 \\
 
 Gegeben sei ein Multilevel Feedback Queueing mit vier
 Priorit"atsklassen, wobei jede Klasse eine eigene Warteschlange,
-Bedienstrategie sowie ein eigenes Quantum hat, wobei Klasse 1 diejenige
-mit der h"ochsten Priorit"at ist:
+Bedienstrategie sowie ein eigenes Quantum hat.  Dabei ist Klasse 1
+diejenige mit der h"ochsten Priorit"at:
 
 \begin{center}
   \begin{tabular}{ccc}
@@ -21,15 +21,15 @@ mit der h"ochsten Priorit"at ist:
   \end{tabular}
 \end{center}
 
-Ein eingehender Prozess wird in der Zeiteinheit nach seinem eintreffen
-in seine Zugeh"orige Warteschlange eingereiht.  Wann immer ein Prozess
-sein Quantum aufgebraucht hat, wird er an das Ende der Warteschlange mit
-n"achstniedrigerer Priorit"at angeh"angt.  Wird ein Prozess
-unterbrochen, bevor er sein Zeitquantum aufgebraucht hat (weil zum
-Beispiel ein neuer Prozess mit h"oherer Priorit"at eintrifft), so wird
-er an den Anfang seiner gegenw"artigen Warteschlange gestellt, darf
-aber, wenn er das n"achste mal aufgerufen wird, nur sein Restquantum
-aufbrauchen.
+Ein eingehender Prozess wird in der Zeiteinheit nach seinem Eintreffen
+in die seiner Priorit"atsklasse zugeh"orige Warteschlange eingereiht.
+Wann immer ein Prozess sein Quantum aufgebraucht hat, wird er an das
+Ende der Warteschlange mit n"achstniedrigerer Priorit"at angeh"angt.
+Wird ein Prozess unterbrochen, bevor er sein Zeitquantum aufgebraucht
+hat (weil zum Beispiel ein neuer Prozess mit h"oherer Priorit"at
+eintrifft), so wird er an den Anfang seiner gegenw"artigen
+Warteschlange gestellt, darf aber, wenn er das n"achste mal aufgerufen
+wird, nur sein Restquantum aufbrauchen.
 
 Nacheinander kommen verschiedene Prozesse mit folgenden Priorit"aten und
 Bedienzeiten an:
