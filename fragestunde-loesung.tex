@@ -8,10 +8,15 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{tikz}
-\usepackage{tikz-qtree}
 \usepackage{enumitem}
 \usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{arrows, positioning, calc, lindenmayersystems,
+  decorations.pathmorphing, intersections}
+\tikzstyle{resource} = [draw, minimum size = 16pt, inner sep = 0pt]
+\tikzstyle{process} = [draw, minimum size = 16pt, inner sep = 0pt, circle]
+\tikzstyle{allocated} = [->, thick, arrows = {-latex}]
 
 \title{Betriebssysteme und Systemsoftware \\ Fragestunde}
 
@@ -28,6 +33,7 @@
 \input{banker-loesung.tex}
 
 \input{rag.tex}
+\input{rag-loesung.tex}
 
 \input{buddy.tex}
 \input{buddy-loesung.tex}
